@@ -1,3 +1,15 @@
+var a = { user: { name: { fname: "sethu" } } };
+
+var b = { ...a }; // spread operators also a deep copy but it supports for deep copy level 1
+
+console.log(b);
+
+b.user.name.fname = "seetha";
+console.log(b);
+console.log(a);
+
+
+
 Object.assign is shallow copy
 
 var obj2 = Object.assign({},obj1) shallow copy but when you change obj1 it not affect the obj2
